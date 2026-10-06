@@ -15,14 +15,13 @@ function App() {
         const randomIndex = Math.floor(Math.random() * usersList.length);
 
         setRecipe(usersList[randomIndex]);
-        console.log(usersList[randomIndex].instructions)
       })
       .catch((error) => console.log(error));
   }
 
   useEffect(() => {
     fetchRandomRecipe();
-  }, []);
+  });
 
 
   return (
@@ -51,7 +50,7 @@ function App() {
           className="counter"
           onClick={() => fetchRandomRecipe()}
         >
-          Refresh
+          Refresh Recepie
         </button>
       </section>
       <section id="spacer"></section>
